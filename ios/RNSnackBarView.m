@@ -92,7 +92,7 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
     textLabel.text = _text;
     textLabel.numberOfLines = 2;
     textLabel.textColor = _textColor;
-    textLabel.font = [UIFont fontNamesForFamilyName: _fontFamily];
+    textLabel.font = [UIFont fontWithName:@"Mulish-Medium" size:14.0];
     [textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:textLabel];
 
