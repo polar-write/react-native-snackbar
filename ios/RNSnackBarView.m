@@ -264,6 +264,8 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
     id textColor = _pendingOptions[@"textColor"];
     self.textColor = textColor ? [RCTConvert UIColor:textColor] : [UIColor whiteColor];
 
+    self.fontFamily = _pendingOptions[@"fontFamily"];
+
     self.text = _pendingOptions[@"text"];
     self.callback = _pendingCallback;
 
