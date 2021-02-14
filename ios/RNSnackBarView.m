@@ -28,7 +28,6 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
 @property(nonatomic, strong) NSString *text;
 @property(nonatomic, strong) UIColor *textColor;
 @property(nonatomic, strong) NSString *actionText;
-@property(nonatomic, strong) NSString *fontFamily;
 @property(nonatomic, strong) UIColor *actionTextColor;
 @property(nonatomic, strong) void (^pendingCallback)();
 @property(nonatomic, strong) void (^callback)();
@@ -92,7 +91,7 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
     textLabel.text = _text;
     textLabel.numberOfLines = 2;
     textLabel.textColor = _textColor;
-    textLabel.font = _font;
+    textLabel.font = [UIFont fontWithName:@"Mulish-Medium" size:18.0];
     [textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:textLabel];
 
@@ -161,10 +160,6 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
 
 - (void)setTextColor:(UIColor *)textColor {
     textLabel.textColor = textColor;
-}
-
-- (void)setFont:(UIFont *)font {
-    textLabel.font = font;
 }
 
 - (void)setNumberOfLines:(int *)numberOfLines {
@@ -267,9 +262,6 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
 
     id textColor = _pendingOptions[@"textColor"];
     self.textColor = textColor ? [RCTConvert UIColor:textColor] : [UIColor whiteColor];
-
-    id fontFamily = _pendingOptions[@"fontFamily"];
-    self.font = [UIFont fontWithName:fontFamily size:16.0]
 
     self.text = _pendingOptions[@"text"];
     self.callback = _pendingCallback;

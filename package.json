@@ -1,6 +1,6 @@
 {
   "name": "react-native-polar-snackbar",
-  "version": "2.3.9",
+  "version": "2.4.0",
   "description": "Material Design \"Snackbar\" component for Android and iOS.",
   "main": "lib/index.js",
   "types": "src/index.d.ts",
