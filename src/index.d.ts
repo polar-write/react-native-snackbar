@@ -55,7 +55,7 @@ export interface SnackBarOptions {
   backgroundColor?: string;
 
   /**
-   * [Android] The basename of a .ttf font from assets/fonts/.
+   * The basename of a .ttf font from assets/fonts/.
    */
   fontFamily?: string;
 

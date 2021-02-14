@@ -28,6 +28,7 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
 @property(nonatomic, strong) NSString *text;
 @property(nonatomic, strong) UIColor *textColor;
 @property(nonatomic, strong) NSString *actionText;
+@property(nonatomic, strong) NSString *fontFamily;
 @property(nonatomic, strong) UIColor *actionTextColor;
 @property(nonatomic, strong) void (^pendingCallback)();
 @property(nonatomic, strong) void (^callback)();
@@ -91,7 +92,7 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
     textLabel.text = _text;
     textLabel.numberOfLines = 2;
     textLabel.textColor = _textColor;
-    textLabel.font = [UIFont boldSystemFontOfSize:14];
+    textLabel.font = [UIFont fontNamesForFamilyName: _fontFamily];
     [textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:textLabel];
 
