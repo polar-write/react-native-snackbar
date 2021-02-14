@@ -91,12 +91,12 @@ static const NSTimeInterval ANIMATION_DURATION = 0.250;
     textLabel.text = _text;
     textLabel.numberOfLines = 2;
     textLabel.textColor = _textColor;
-    textLabel.font = [UIFont fontWithName:@"Mulish-Medium" size:18.0];
+    textLabel.font = [UIFont fontWithName:@"Mulish-Medium" size:16.0];
     [textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:textLabel];
 
     actionButton = [UIButton new];
-    actionButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    actionButton.titleLabel.font = [UIFont fontWithName:@"Mulish-Medium" size:16.0];
     [actionButton setTitle:@"" forState:UIControlStateNormal];
     [actionButton addTarget:self
                      action:@selector(actionPressed:)
